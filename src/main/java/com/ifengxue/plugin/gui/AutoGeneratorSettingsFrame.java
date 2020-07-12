@@ -208,7 +208,8 @@ public class AutoGeneratorSettingsFrame {
     settings.getChkBoxGenerateMethodComment()
         .setSelected((applicationProperties.getBoolean(createKey("generate_method_comment"), true)));
     settings.getTextExtendBaseClass().setText(projectProperties.getValue(createKey("extend_base_class"), ""));
-    settings.getTextExcludeFields().setText(projectProperties.getValue(createKey("exclude_fields"), ""));
+    // PPVOS 增加默认值
+    settings.getTextExcludeFields().setText(projectProperties.getValue(createKey("exclude_fields"), "inserttime,updatetime,isactive"));
     settings.getTextEntityPackage().setText(projectProperties.getValue(createKey("entity_package"), ""));
     config.setEntityDirectory(projectProperties.getValue(createKey("entity_directory"), ""));
     settings.getTxtRepositoryPackage().setText(projectProperties.getValue(createKey("repository_package"), ""));

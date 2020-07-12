@@ -60,6 +60,14 @@ public class EntitySourceParserV2 extends AbstractSourceParser {
     importClassList.add("javax.persistence.Table");
     annotationList.add("Table(name = \"" + table.getTableName() + "\")");
 
+    // PPOVS，设置
+    importClassList.add("org.hibernate.annotations.*;\n");
+    annotationList.add("DynamicInsert");
+    annotationList.add("DynamicUpdate");
+    annotationList.add("SQLDelete(sql = \"update " + table.getTableName() + " set isactive=0 where id = ?\")");
+    annotationList.add("Where(clause = \"isactive=1\")");
+    annotationList.add("Entity");
+
     // 处理表字段
     context.put("columns", table.getColumns());
     if (!table.getColumns().isEmpty()) {
