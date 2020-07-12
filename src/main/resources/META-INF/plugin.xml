@@ -30,6 +30,7 @@
   <depends optional="true">com.intellij.database</depends>
 
   <description><![CDATA[
+      <p>基于公司需求对开源插件做了一定定制化.</p>
       <p>Generate entity/repository class for JPA/Lombok/Spring Data JPA.</p>
       <p>Support internationalization. Currently supported languages are English, 简体中文.</p>
       <p>Support multiple types of databases. Currently supported database are Mysql, PostgreSQL.</p>
@@ -57,7 +58,7 @@
   <name>Jpa Support</name>
 
   <vendor email="liukefeng2008@hotmail.com" url="https://github.com/carter-ya/idea-plugin-jpa-support">
-    https://github.com/carter-ya/idea-plugin-jpa-support
+    https://github.com/cymoft/idea-plugin-jpa-support
   </vendor>
 
   <version>2.0.1</version>

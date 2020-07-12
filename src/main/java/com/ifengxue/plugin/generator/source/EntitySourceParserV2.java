@@ -8,6 +8,7 @@ import com.ifengxue.plugin.generator.tree.Element;
 import com.ifengxue.plugin.util.StringHelper;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 import org.apache.velocity.VelocityContext;
@@ -28,11 +29,11 @@ public class EntitySourceParserV2 extends AbstractSourceParser {
     context.put("package", tablesConfig.getEntityPackageName());
     Set<String> importClassList = new HashSet<>();
     context.put("importClassList", importClassList);
-    Set<String> annotationList = new HashSet<>();
+    Set<String> annotationList = new LinkedHashSet<>();
     context.put("annotationList", annotationList);
     context.put("simpleName", table.getEntityName());
     context.put("parentClass", tablesConfig.getExtendsEntityName());
-    Set<String> implementClassList = new HashSet<>();
+    Set<String> implementClassList = new LinkedHashSet<>();
     context.put("implementClassList", implementClassList);
 
     // 增加序列化注解

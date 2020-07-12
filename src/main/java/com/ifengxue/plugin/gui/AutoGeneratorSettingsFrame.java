@@ -198,7 +198,7 @@ public class AutoGeneratorSettingsFrame {
     settings.getChkBoxUseLombok()
         .setSelected((applicationProperties.getBoolean(createKey("use_lombok"), true)));
     settings.getChkBoxGenerateRepository()
-        .setSelected((applicationProperties.getBoolean(createKey("generate_repository"), true)));
+        .setSelected((applicationProperties.getBoolean(createKey("generate_repository"), false)));
     settings.getChkBoxSerializable()
         .setSelected((applicationProperties.getBoolean(createKey("implement_serializable"), true)));
     settings.getChkBoxGenerateClassComment()
